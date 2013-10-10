@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>title</key>
+    <string>CamVolNormal</string>
+    <key>entry</key>
+    <dict>
+      <key>cell</key>
+      <string>PSLinkCell</string>
+      <key>icon</key>
+      <string>CVN.png</string>
+      <key>label</key>
+      <string>CamVolNormal</string>
+    </dict>
+    <key>items</key>
+    <array>
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>CamVolNormal</string>
+        <key>footerText</key>
+        <string>When enabled, the shutter feature of volume buttons will be activated only when you release it.
+
+For example, you hold the volume button to take photo, but you aren't not sure for the photo, so you just hold the button without camera will automatically takes photo for you then you just release it to take the best photo for you.
+
+IMPORTANT: If you have CamVolZoom installed, this tweak will takes no effect except you disabled CamVolZoom and restarted SpringBoard.
+© 2013 Thuchapol Unprasert
+(@PoomSmart)</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSSwitchCell</string>
+        <key>default</key>
+        <false/>
+        <key>defaults</key>
+        <string>com.PS.CamVolNormal</string>
+        <key>key</key>
+        <string>CVNEnabled</string>
+        <key>label</key>
+        <string>Enabled</string>
+      </dict>
+    </array>
+  </dict>
+</plist>

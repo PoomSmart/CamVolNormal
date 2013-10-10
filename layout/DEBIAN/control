@@ -1,0 +1,8 @@
+Package: org.thebigboss.camvolnormal
+Name: CamVolNormal
+Depends: mobilesubstrate, firmware (>= 5.0), gsc.still-camera | gsc.front-facing-camera
+Version: 1.0
+Architecture: iphoneos-arm
+Description: The shutter feature will be activated only when volume button is released after pressed, not just pressed.
+Author: PoomSmart
+Section: Tweaks
