@@ -3,6 +3,6 @@ Name: CamVolNormal
 Depends: mobilesubstrate, firmware (>= 5.0), gsc.still-camera | gsc.front-facing-camera
 Version: 1.0
 Architecture: iphoneos-arm
-Description: The shutter feature will be activated only when volume button is released after pressed, not just pressed.
+Description: activate shutter when volume key released.
 Author: PoomSmart
 Section: Tweaks
