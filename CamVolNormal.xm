@@ -55,18 +55,34 @@ static void _logos_method$_ungrouped$PLCameraView$_handleVolumeUpButtonDown(PLCa
 {
 	%orig;
 	Class _logos_class$_ungrouped$PLCameraView = objc_getClass("PLCameraView");
-	MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeButtonUp), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeButtonUp, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeButtonUp);
-	MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeButtonDown), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeButtonDown, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeButtonDown);
-	MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeUpButtonUp), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeUpButtonUp, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeUpButtonUp);
-	MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeUpButtonDown), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeUpButtonDown, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeUpButtonDown);
+	if (_logos_class$_ungrouped$PLCameraView != nil) {
+		// iOS 5
+		if (kCFCoreFoundationVersionNumber >= 550.32 && kCFCoreFoundationVersionNumber < 793.00) {
+			MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeUpButtonUp), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeUpButtonUp, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeUpButtonUp);
+			MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeUpButtonDown), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeUpButtonDown, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeUpButtonDown);
+		}
+		// iOS 6
+		else if (kCFCoreFoundationVersionNumber >= 793.00) {
+			MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeButtonUp), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeButtonUp, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeButtonUp);
+			MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeButtonDown), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeButtonDown, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeButtonDown);
+		}
+	}
 }
 
 %end
 
 %ctor {
 	Class _logos_class$_ungrouped$PLCameraView = objc_getClass("PLCameraView");
-	MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeButtonUp), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeButtonUp, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeButtonUp);
-	MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeButtonDown), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeButtonDown, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeButtonDown);
-	MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeUpButtonUp), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeUpButtonUp, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeUpButtonUp);
-	MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeUpButtonDown), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeUpButtonDown, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeUpButtonDown);
+	if (_logos_class$_ungrouped$PLCameraView != nil) {
+		// iOS 5
+		if (kCFCoreFoundationVersionNumber >= 550.32 && kCFCoreFoundationVersionNumber < 793.00) {
+			MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeUpButtonUp), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeUpButtonUp, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeUpButtonUp);
+			MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeUpButtonDown), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeUpButtonDown, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeUpButtonDown);
+		}
+		// iOS 6
+		else if (kCFCoreFoundationVersionNumber >= 793.00) {
+			MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeButtonUp), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeButtonUp, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeButtonUp);
+			MSHookMessageEx(_logos_class$_ungrouped$PLCameraView, @selector(_handleVolumeButtonDown), (IMP)&_logos_method$_ungrouped$PLCameraView$_handleVolumeButtonDown, (IMP*)&_logos_orig$_ungrouped$PLCameraView$_handleVolumeButtonDown);
+		}
+	}
 }
