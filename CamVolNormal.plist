@@ -10,8 +10,13 @@
 			<string>com.apple.springboard</string>
 			<string>com.apple.MobileSMS</string>
 			<string>com.bitesms</string>
-			<string>com.apple.UIKit</string>
 		</array>
+		<key>Classes</key>
+		<array>
+			<string>UIImagePickerController</string>
+		</array>
+		<key>Mode</key>
+		<string>Any</string>
 	</dict>
 </dict>
 </plist>
